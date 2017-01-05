@@ -1,0 +1,69 @@
+.header
+	position: relative
+	max-width: 600px
+	margin: 60px auto 30px auto
+	padding: 40px
+	text-align: center
+	box-shadow: 0px 2px 10px rgba(0,0,0,.3)
+	background-color: $secondary
+
+	&__logo
+		position: absolute
+		top: 10px
+		left: 10px
+		width: 45px
+
+		img
+			width: 100%
+
+	&__title
+		margin: 20px 0
+		color: $primary
+		font-size: 68px
+		line-height: 1
+		letter-spacing: 1px
+
+	&__kicker
+		color: $white
+
+	&__download
+		height: 38px
+		padding: 0 30px
+		color: $white
+		font-size: 12px
+		font-weight: 500
+		line-height: 38px
+		text-transform: uppercase
+		letter-spacing: 1.8px
+		border: 1px solid $gray-muted
+		border-radius: 4px
+
+		&:hover
+			border-color: $white
+
+	&__fork
+		position: absolute
+		top: 10px
+		right: -10px
+		transform-origin: right top
+		padding: 2px 6px
+		color: $secondary
+		box-shadow: 2px 4px 10px rgba(0,0,0,.2)
+		background-color: $primary
+
+		&:hover
+			animation: shake .6s linear
+
+	@keyframes shake
+		from
+			transform: rotate(0deg)
+		20%
+			transform: rotate(8deg)
+		40%
+			transform: rotate(-8deg)
+		60%
+			transform: rotate(3deg)
+		80%
+			transform: rotate(-3deg)
+		to
+			transform: rotate(0deg)
