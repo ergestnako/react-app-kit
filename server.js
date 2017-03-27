@@ -18,3 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/', function (req, res) {
   res.render('index')
 })
+
+app.listen(PORT,function() {
+  console.log('\n=== Listening on port ' + PORT + ' ===\n')
+ })
