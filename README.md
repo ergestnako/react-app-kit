@@ -2,24 +2,26 @@
 
 Ground zero for your next React app.
 
-  - Sass is transpiled, autoprefixed, and minified
-  - ES6 and JSX are transpiled and uglified
-  - Production files are updated on save and the browser will refresh automagically
-  - All required/imported modules are concatenated and minified into a single file
-  - Ran on an Express server that is deployable to Heroku
+## Webpack
+
+  - Autoprefixer
+  - Babel
+  - UglifyJS
+  - Webpack Dev Server
+  - Hot Module Replacement
 
 ## Getting started
 
   - clone the repo
   - `npm install`
   - `npm run dev`
-  - Live [http://localhost:3000](http://localhost:3000)
+  - Live [http://localhost:8080](http://localhost:8080)
 
 ## Available commands
 
-  - `npm run build` compile all src to dist
+  - `npm run build:dev` compile all src to dist
+  - `npm run build:prod` wipe out dist, recompile all src to dist with performance optimizations
   - `npm run dev` start server, watch files, and auto refresh
-  - `npm run prod` wipe out dist, recompile all src to dist, and uglify JavaScript
   - `npm run clean` wipe out dist entirely
 
 ## Publishing

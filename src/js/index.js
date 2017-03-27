@@ -1,6 +1,9 @@
+const css = require('../css/main.sass')
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
+import avatar from '../img/avatar.jpg'
+import reactLogo from '../img/react-logo.svg'
 
 const app = function() {
 
@@ -20,7 +23,7 @@ const app = function() {
 		return (
 			<header className="header">
 				<a className="header__logo" href="https://facebook.github.io/react/" target="_blank">
-					<img src="img/react-logo.svg" alt="React" />
+					<img src={reactLogo} alt="React" />
 				</a>
 				<h1 className="header__title">React<br/>App Kit</h1>
 				<p className="header__kicker">Ground zero for your next React app.</p>
@@ -35,7 +38,7 @@ const app = function() {
 			<article className="attribution">
 				<p className="attribution__statement">Brought to you by</p>
 				<div className="attribution__label">
-					<img className="attribution__label-avatar" src="img/avatar.jpg" alt="Bucky Maler"/>
+					<img className="attribution__label-avatar" src={avatar} alt="Bucky Maler"/>
 					<div className="attribution__label-el">
 						<p className="name">Bucky Maler</p>
 						<a className="twitter" href="https://twitter.com/BuckyMaler">@BuckyMaler</a>
