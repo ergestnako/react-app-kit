@@ -3,21 +3,21 @@ const bodyParser = require('body-parser')
 const renderFile = require('ejs').renderFile
 const app = express()
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 8080
 
 app.set('port', PORT)
-app.set('views', '.')
+// app.set('views', '.')
 app.engine('html', renderFile)
 app.set('view engine', 'html')
 
-app.use(express.static(__dirname + '/'))
+app.use(express.static(__dirname + '/dist'))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get('/', function (req, res) {
-  res.render('index')
-})
+// app.get('/dist', function (req, res) {
+//   res.render('index')
+// })
 
 app.listen(PORT, function() {
   console.log('\n=== Listening on port ' + PORT + ' ===\n')

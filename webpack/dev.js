@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const { resolve } = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
 module.exports = function(env) {
@@ -8,7 +9,6 @@ module.exports = function(env) {
     entry: './src/js/index.js',
     output: {
       path: resolve(__dirname, '../dist'),
-      publicPath: '/dist/',
       filename: 'index.bundle.js'
     },
     module: {
@@ -44,17 +44,21 @@ module.exports = function(env) {
         },
         {
           test: /\.(jpe?g|png|gif|svg)$/,
-          use: 'file-loader?name=[name].[ext]&publicPath=dist/img/&outputPath=/img/'
+          use: 'file-loader?name=[name].[ext]&publicPath=img/&outputPath=/img/'
         }
       ]
     },
     devServer: {
+      contentBase: resolve(__dirname, '../dist'),
       compress: true,
       hot: true,
       stats: 'errors-only',
       open: true
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: 'src/index.html'
+      }),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin()
     ]
