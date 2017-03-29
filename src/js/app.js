@@ -1,4 +1,4 @@
-const css = require('../css/main.sass')
+import css from '../css/app.sass'
 import 'babel-polyfill'
 import React from 'react'
 import { render } from 'react-dom'
