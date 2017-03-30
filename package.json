@@ -2,9 +2,9 @@
   "name": "react-app-kit",
   "version": "0.0.1",
   "description": "ground zero for your next react app",
-  "main": "index.html",
+  "main": "app.js",
   "scripts": {
-    "start": "node --use_strict server.js",
+    "start": "node server.js",
     "build:dev": "webpack --env=dev --progress --profile --colors",
     "build:prod": "npm run clean && webpack --env=prod --progress --profile --colors",
     "dev": "webpack-dev-server --env=dev",
@@ -47,11 +47,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
-    "body-parser": "^1.15.2",
-    "ejs": "^2.4.2",
     "express": "^4.14.0",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0"
   }

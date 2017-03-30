@@ -43,7 +43,6 @@ With Heroku command line tools installed, simply run:
 
 ## Credits
   - [React](https://creativecommons.org/licenses/by/3.0/) logo modified with removal of background color
-  - [magentanova](https://github.com/magentanova) `server.js`
   - [DevTips Starter Kit](https://github.com/DevTips/DevTips-Starter-Kit) visual design heavily influenced the React App Kit visual design
 
 ## Misc:
