@@ -2,7 +2,7 @@
   "name": "react-app-kit",
   "version": "0.0.1",
   "description": "ground zero for your next react app",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "build:dev": "webpack --env=dev --progress --profile --colors",
