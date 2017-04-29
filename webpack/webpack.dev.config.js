@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = function(env) {
   return {
-    devtool: 'eval',
+    devtool: 'cheap-module-source-map',
     entry: './src/js/index.js',
     output: {
       path: resolve(__dirname, '../dist'),
