@@ -8,10 +8,10 @@ const autoprefixer = require('autoprefixer')
 module.exports = function(env) {
   return {
     devtool: 'cheap-module-source-map',
-    entry: './src/js/app.js',
+    entry: './src/js/index.js',
     output: {
       path: resolve(__dirname, '../dist'),
-      filename: 'app.bundle.js',
+      filename: 'index.bundle.js',
     },
     module: {
       rules: [
@@ -73,7 +73,7 @@ module.exports = function(env) {
         comments: false
       }),
       new ExtractTextPlugin({
-        filename: 'app.css',
+        filename: 'index.css',
         allChunks: true
       })
     ]

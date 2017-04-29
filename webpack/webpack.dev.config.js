@@ -6,10 +6,10 @@ const autoprefixer = require('autoprefixer')
 module.exports = function(env) {
   return {
     devtool: 'eval',
-    entry: './src/js/app.js',
+    entry: './src/js/index.js',
     output: {
       path: resolve(__dirname, '../dist'),
-      filename: 'app.bundle.js'
+      filename: 'index.bundle.js'
     },
     module: {
       rules: [
