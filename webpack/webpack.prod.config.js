@@ -13,15 +13,18 @@ module.exports = function(env) {
       path: resolve(__dirname, '../dist'),
       filename: 'index.bundle.js',
     },
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: 'babel-loader'
         },
         {
-          test: /\.sass$/,
+          test: /\.(sass|scss)$/,
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: [
@@ -36,8 +39,8 @@ module.exports = function(env) {
                         '>1%',
                         'last 4 versions',
                         'Firefox ESR',
-                        'not ie < 9',
-                      ],
+                        'not ie < 9'
+                      ]
                     }),
                   ],
                 }
